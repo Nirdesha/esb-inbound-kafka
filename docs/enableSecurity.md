@@ -122,13 +122,13 @@ The client configuration can slightly differ depending on whether you want the c
 ```
 The console producer is a convenient way to send a small amount of data to the broker.
 
-   * Follow the sample scenario in Publishing Messages using [Kafka_2.12-0.11.0.0](https://github.com/wso2-extensions/esb-connector-kafka/blob/master/docs/publishmessage.md), and send the following message to the Kafka broker:
+   * Follow the sample scenario in Publishing Messages using [Kafka_2.12-0.11.0.0](https://github.com/wso2-extensions/esb-connector-kafka/blob/master/docs/publishmessage.md) and send the following message to the Kafka broker:
         
             {"test":"wso2"}
             {"test":"wso2"}
             {"test":"wso2"}
                     
-        >>Note : Be sure to include the following configuration in the proxy service when you are building the sample :
+        >>Note: Be sure to include the following configuration in the proxy service when you are building the sample:
                 
             bootstrap.servers=localhost:9093
             security.protocol=SSL
@@ -141,7 +141,7 @@ The console producer is a convenient way to send a small amount of data to the b
 ## Configuring TLS authentication for the Kafka consumer
 The console consumer is a convenient way to consume messages. You can either use the console consumer or the [Kafka inbound endpoint](https://github.com/wso2-extensions/esb-inbound-kafka/blob/master/README.md) to consume messages.
 
-   * Execute the following command on the terminal to start the consumer with security :
+   * Execute the following command using the terminal to start the consumer with security :
         
           bin/kafka-console-consumer --bootstrap-server localhost:9093 --topic test --new-consumer --from-beginning --consumer.config {file-path}/consumer_ssl.properties
 
@@ -154,12 +154,12 @@ The console consumer is a convenient way to consume messages. You can either use
            ssl.keystore.location={file-path}/kafka.client.keystore.jks
            ssl.keystore.password=test1234
            ssl.key.password=test1234
-Now that you have applied TLS authentication to Kafka brokers, producers and consumers.
 
+You have now applied TLS authentication to Kafka brokers, producers, and consumers.
 
 ##### Analyzing the output
 
-You will see the following output on the consumer console:
+You see the following output on the consumer console:
     
     {"test":"wso2"}
     {"test":"wso2"}
